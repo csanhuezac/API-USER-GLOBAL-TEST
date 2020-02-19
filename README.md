@@ -39,7 +39,7 @@ INSTALACION DEL PROYECTO
       
   b) Deploy Server Java Aplication
   
-       Boton derecho sobre la clase main "ApiRestApplication.java" > Run As >Java Aplication
+       Boton derecho sobre la clase main "ApiRestApplication.java" > Run As > Java Aplication
        
 5.- EJECUTAR SERVICIO 
 
