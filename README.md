@@ -1,25 +1,27 @@
 # API-USER-GLOBAL-TEST
 ejercicio practico postulacion
 
-REQUISITOS SOWTWARE:
+REQUISITOS SOWTWARE
 
-*apache-maven-3.6.1
-*Java 8
-*eclipse version 2019-03
+       * apache-maven-3.6.1
+       * Java 8
+       * eclipse version 2019-03
 
-INSTALACION PROJECTO
 
-1. CLONAR DE REPOSITORIO GITHUB CODIGO FUENTE
+INSTALACION DEL PROJECTO
 
-   git clone https://github.com/csanhuezac/API-USER-GLOBAL-TEST.git  
-   
-2. IMPORT PROJECT ECLIPSE :
-
-    File > import > Maven > Existing Maven projects
+1.- CLONAR DE REPOSITORIO GITHUB CODIGO FUENTE
   
-    Elegir directorio de clonacion del projecto
+       git clone https://github.com/csanhuezac/API-USER-GLOBAL-TEST.git  
+
+2.- IMPORTAR PROJECT 
+
+  Abrir desde Eclipse :
+  
+       File > import > Maven > Existing Maven projects
+       Seleccionar directorio de clonacion del projecto
    
-3.- INSTLACION DE DEPENDENCIAS 
+3.- INSTALACION DE DEPENDENCIAS 
 
   Abrir ubicacion con terminal ejecutar :
   
