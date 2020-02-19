@@ -52,7 +52,12 @@ INSTALACION DEL PROYECTO
   
     Method Http : GET
     URL Service : http://localhost:8080/api/user/
+    
+ 6.- CONSOLA BASE DE DATOS
  
+      URL     : http://localhost:8080/console
+      USER    : sa
+      PASSWORD: admin
     
 
 
