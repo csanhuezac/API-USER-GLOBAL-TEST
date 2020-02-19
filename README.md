@@ -3,10 +3,9 @@ ejercicio practico postulacion
 
 REQUISITOS SOWTWARE:
 
-apache-maven-3.6.1
-
-* Java 8
-* eclipse version 2019-03
+*apache-maven-3.6.1
+*Java 8
+*eclipse version 2019-03
 
 INSTALACION PROJECTO
 
