@@ -30,14 +30,23 @@ public class UserController {
 	 private static final Logger LOGGER=LoggerFactory.getLogger(UserController.class);
 
 	private final UtilsValidator validator = new UtilsValidator();
+	
+	public UserController(UserService userService) {
+		if (this.userService == null) {
+			this.userService = userService;
+		}
+	}
 
 	public ResponseUserModel createUser(UserResquestModel userRequest) throws Exception {
 		
 		try {
 			validator.validate(userRequest);
-			User user = userService.save(mapUserRequest(userRequest));
+			User user = mapUserRequest(userRequest);
+			user = userService.save(user);
 			LOGGER.info(" :: Save user name: "+user.getName()+" :: email: "+user.getEmail());
+			
 			return mapUserResponse(user);
+			
 		} catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
@@ -49,11 +58,15 @@ public class UserController {
 		
 		LOGGER.info(" :: Generate token JWT ");
 		final Instant now = Instant.now();
-		return Jwts.builder().setSubject(user.getEmail()).setIssuedAt(Date.from(now))
-				.signWith(SignatureAlgorithm.HS256, TextCodec.BASE64.encode(secret)).compact();
+		String token = "";
+		if (secret!= null) {
+			token = Jwts.builder().setSubject(user.getEmail()).setIssuedAt(Date.from(now))
+					.signWith(SignatureAlgorithm.HS256, TextCodec.BASE64.encode(secret)).compact();
+		}
+		return token;
 	}
 
-	private User mapUserRequest(UserResquestModel userRequest) throws Exception {
+	public User mapUserRequest(UserResquestModel userRequest) throws Exception {
 		
 		LOGGER.info(" :: Mapper userRequest to user : ");
 		try {
