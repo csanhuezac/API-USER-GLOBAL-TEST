@@ -19,6 +19,7 @@ DEPLOYANDO EL PROYECTO
        git clone https://github.com/csanhuezac/API-USER-GLOBAL-TEST.git  
 
 2.- DEPLOY DEL PROJECTO
+
    Ejecuta los siguientes comandos:
    
         mvn clean 
@@ -26,6 +27,7 @@ DEPLOYANDO EL PROYECTO
         mvn spring-boot:run
        
 3.- EJECUTAR TEST 
+
    Ejecuta el siguiente comandos:
    
          mvn test
